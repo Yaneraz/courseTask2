@@ -21,11 +21,9 @@
 
 .l_3col {
 	.l__col {
-		min-height:33%;
-		min-height:33vh;
+		min-height:1px;
 	}
-	.l__col,
-	.block-link {
+	.l__col {
 		width:33.3%;
 
 		@include r($s2){

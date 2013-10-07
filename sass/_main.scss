@@ -3,10 +3,14 @@ $whiteColor: #ebebeb;
 $pureWhiteColor: #fff;
 $blackColor: #515151;
 $pureColor: #000;
-
 $blueColor: #088ca5;
 
-//vertical-align block
+// indents
+$s1indent: 80px;
+$s2indent: 54px;
+$s3indent: 27px;
+
+// vertical-align block abstract class
 // height and width must be specified
 %vab {
 	white-space:nowrap;
@@ -19,6 +23,13 @@ $blueColor: #088ca5;
 		overflow:hidden;
 		margin:0 0 0 -5px;
 		vertical-align:middle;
+	}
+}
+
+@include r($s2){
+	body {
+		overflow-x:hidden;
+		overflow-y:visible;
 	}
 }
 
@@ -179,9 +190,12 @@ $blueColor: #088ca5;
 		display:inline-block;
 		vertical-align:middle;
 		white-space:normal;
-		margin:30px 80px 0;
+		margin:30px $s1indent 0;
 		@include r($s2){
-			margin:0 54px;
+			margin:0 $s2indent;
+		}
+		@include r($s3){
+			margin:0 $s3indent;
 		}
 	}
 
@@ -196,7 +210,7 @@ $blueColor: #088ca5;
 			line-height:1;
 			margin-bottom:12px;
 		}
-		@include r($s2){
+		@include r($s3){
 			font-size:30px;
 			margin-bottom:0;
 		}
@@ -251,7 +265,8 @@ $blueColor: #088ca5;
 .text-box {
 	position:relative;
 	min-height:24%;
-	width:100%;
+	padding-right:22.5%;
+	padding-right:22.5vw;
 	background:#27212c;
 
 	@extend %vab;
@@ -265,17 +280,17 @@ $blueColor: #088ca5;
 		font-size:30px;
 		display:inline-block;
 		vertical-align:middle;
-		margin-left:85px;
+		margin:0 $s1indent;
 		color:#9282a0;
 		white-space:normal;
 
 		@include r($s2){
 			font-size:20px;
-			margin-left:54px;
+			margin:0 $s2indent;
 		}
 		@include r($s3){
 			font-size:12px;
-			margin-left:27px;
+			margin:0 $s3indent;
 		}
 	}
 	.text-box__link {
@@ -283,6 +298,7 @@ $blueColor: #088ca5;
 		top:0;
 		right:0;
 		bottom:0;
+		width:22.5%;
 		width:22.5vw;
 	}
 }
@@ -316,22 +332,20 @@ $blueColor: #088ca5;
 	position:relative;
 
 	.l__col {
-		min-height:296px;
 
 		@include r($s2){
 			position:relative;
-			min-height:540px;
+			//min-height:540px;
 		}
 		@include r($s3){
-			min-height:270px;
+			//min-height:250px;
 		}
 	}
 
 	.block-link {
-		position:absolute;
-		top:0;
-		left:0;
-		height:100%;
+		display:block;
+		height:0;
+		padding-bottom:86.8%; // 296/341 = 0.8680
 	}
 
 	img {
@@ -342,14 +356,14 @@ $blueColor: #088ca5;
 
 /* ===== [ Text block ] ===== */
 .text {
-	padding:46px 85px;
+	padding:46px $s1indent;
 	background:#ebebeb;
 	
 	@include r($s2){
-		padding:46px 74px;
+		padding:46px $s2indent*1.5;
 	}
 	@include r($s2){
-		padding:23px 38px;
+		padding:23px $s3indent*1.5;
 	}
 
 	.text__ttl {
@@ -370,7 +384,7 @@ $blueColor: #088ca5;
 		}
 	}
 
-	p{
+	p {
 		font-size:14px;
 		line-height:26px;
 		margin-bottom:29px;

@@ -2,7 +2,7 @@
 $s0: 1024px;
 $s1: 980px;
 $s2: 640px;
-$s3: 401px;
+$s3: 320px;
 
 @mixin r($media) {
 	@media only screen and (max-width: $media) { @content; }
