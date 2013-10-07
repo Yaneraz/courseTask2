@@ -15,7 +15,7 @@ body { font-family: Montserrat, Arial,sans-serif; font-weight: normal; font-size
 
 a img, fieldset { border: none; }
 
-.l-case { margin: 0 auto; max-width: 960px; }
+.l-case { margin: 0 auto; }
 
 .l .l__col { float: left; width: 50%; }
 @media only screen and (max-width: 640px) { .l .l__col { float: none; width: auto; } }
@@ -29,9 +29,9 @@ a img, fieldset { border: none; }
 
 @media only screen and (max-width: 640px) { body { overflow-x: hidden; overflow-y: visible; } }
 /* ===== [ Navigation ] ===== */
-.nav { position: relative; z-index: 2; padding: 37px 54px; background: #373c3f; }
-@media only screen and (max-width: 640px) { .nav { padding: 20px 38px; } }
-@media only screen and (max-width: 320px) { .nav { padding: 10px 20px; } }
+.nav { position: relative; z-index: 2; padding: 37px 80px; background: #373c3f; }
+@media only screen and (max-width: 640px) { .nav { padding: 20px 54px; } }
+@media only screen and (max-width: 320px) { .nav { padding: 10px 27px; } }
 @media only screen and (max-width: 640px) { .nav .nav__list { position: absolute; top: 100%; left: 0; width: 100%; } }
 .nav .nav__list-item { font-size: 15px; display: inline-block; vertical-align: top; margin-right: 25px; text-transform: uppercase; }
 .nav .nav__list-item a { text-decoration: none; color: #ebebeb; }

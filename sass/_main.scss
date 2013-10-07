@@ -37,14 +37,14 @@ $s3indent: 27px;
 .nav {
 	position:relative;
 	z-index:2;
-	padding:37px 54px;
+	padding:37px $s1indent;
 	background:#373c3f;
 
 	@include r($s2){
-		padding:20px 38px;
+		padding:20px $s2indent;
 	}
 	@include r($s3){
-		padding:10px 20px;
+		padding:10px $s3indent;
 	}
 
 
