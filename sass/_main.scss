@@ -10,6 +10,17 @@ $s1indent: 80px;
 $s2indent: 54px;
 $s3indent: 27px;
 
+@font-face {
+	font-family: 'Quicksandbold';
+	src: url('fonts/quicksand-bold-webfont.eot');
+	src: url('fonts/quicksand-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/quicksand-bold-webfont.woff') format('woff'),
+	url('fonts/quicksand-bold-webfont.ttf') format('truetype'),
+	url('fonts/quicksand-bold-webfont.svg#quicksandbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 // vertical-align block abstract class
 // height and width must be specified
 %vab {
@@ -31,6 +42,13 @@ $s3indent: 27px;
 		overflow-x:hidden;
 		overflow-y:visible;
 	}
+}
+
+/* ==== [ Icons ] ==== */
+.glyph-ico {
+	font:24px "Quicksandbold" sans-serif;
+	text-decoration:none !important;
+	color:#555;
 }
 
 /* ===== [ Navigation ] ===== */
@@ -228,33 +246,35 @@ $s3indent: 27px;
 		}
 
 		&:after {
-			content:"";
+			content:">";
 			position:absolute;
-			top:14px;
+			top:1px;
 			right:0;
-			height:25px;
-			width:15px;
-			background:url("../img/icons/banner_arrow.png");
-			//@include s(banner_arrow);
-			background-size:100% 100%;
+			font:40px "quicksandbold";
+			color:$pureWhiteColor;
+		}
+
+		@include r($s1){
+
+			&:after {
+				font-size:36px;
+				top:5px;
+			}
 		}
 
 		@include r($s2){
 			font-size:24px;
 
 			&:after {
-				top:8px;
-				height:16px;
-				width:10px;
+				font-size:26px;
 			}
 		}
 		@include r($s3){
 			font-size:12px;
 
 			&:after {
-				top:1px;
-				height:12px;
-				width:7px;
+				font-size:16px;
+				top:-2px;
 			}
 		}
 	}
@@ -309,12 +329,22 @@ $s3indent: 27px;
 	background:#bc3183;
 
 	&:after {
-		content:"";
+		content:">";
 		position:absolute;
 		top:50%;
 		left:50%;
-		margin:-17px 0 0 -11px;
-		@include  s(banner_arrow-big);
+		margin:-18px 0 0 -11px;
+		font:52px "quicksandbold";
+		color:$pureWhiteColor;
+
+		@include r($s2){
+			font-size:34px;
+			margin:-12px 0 0 -8px;
+		}
+		@include r($s3){
+			font-size:18px;
+			margin:-8px 0 0 -5px;
+		}
 	}
 }
 
@@ -322,8 +352,20 @@ $s3indent: 27px;
 	background:#5b0fa1;
 
 	&:after {
-		margin:-12px 0 0 -7px;
-		@include  s(banner_arrow);
+		font-size:44px;
+		margin:-15px 0 0 -10px;
+
+		@include r($s1){
+			font-size:41px;
+		}
+		@include r($s2){
+			font-size:79px;
+			margin:-25px 0 0 -18px;
+		}
+		@include r($s3){
+			font-size:41px;
+			margin:-14px 0 0 -9px;
+		}
 	}
 }
 
